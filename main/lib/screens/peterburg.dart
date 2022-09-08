@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:main/main.dart';
 
-class Moscow extends StatelessWidget {
-  const Moscow({super.key});
+class Peterburg extends StatelessWidget {
+  const Peterburg({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -10,20 +10,20 @@ class Moscow extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           backgroundColor: Color.fromARGB(255, 85, 84, 192),
-          title: Text('Moscow City Tour'),
+          title: Text('Russian Citys Tour'),
         ),
         backgroundColor: Color.fromARGB(255, 120, 102, 224),
-        body: MoscowScreen(),
+        body: PeterburgScreen(),
       ),
     );
   }
 }
 
-class MoscowScreen extends StatefulWidget {
-  const MoscowScreen({super.key});
+class PeterburgScreen extends StatefulWidget {
+  const PeterburgScreen({super.key});
 
   @override
-  State<MoscowScreen> createState() => _MoscowScreenState();
+  State<PeterburgScreen> createState() => _PeterburgScreenState();
 }
 
 String payingMethod = '';
@@ -31,7 +31,7 @@ List trasportation = ["Plane", "Ship", "Yacht"];
 String selectedAnswer = "Plane";
 bool isChecked = false;
 
-class _MoscowScreenState extends State<MoscowScreen> {
+class _PeterburgScreenState extends State<PeterburgScreen> {
   @override
   Widget build(BuildContext context) {
     return ListView(
@@ -45,7 +45,7 @@ class _MoscowScreenState extends State<MoscowScreen> {
               width: double.infinity,
               decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage("images/Moscow.jpg"),
+                  image: AssetImage("images/Peterburg.jpg"),
                   fit: BoxFit.fill,
                 ),
                 shape: BoxShape.rectangle,
@@ -56,7 +56,7 @@ class _MoscowScreenState extends State<MoscowScreen> {
             ),
             Container(
               child: Text(
-                "Moscow",
+                "St. Peterburg",
                 style: TextStyle(
                     fontSize: 25,
                     fontWeight: FontWeight.bold,
@@ -79,7 +79,7 @@ class _MoscowScreenState extends State<MoscowScreen> {
                   color: Color.fromARGB(255, 20, 177, 22),
                 ),
                 Text(
-                  "400 JD ",
+                  "300 JD ",
                   style: TextStyle(
                     fontSize: 25,
                     fontWeight: FontWeight.bold,
@@ -95,7 +95,7 @@ class _MoscowScreenState extends State<MoscowScreen> {
                   color: Color.fromARGB(255, 255, 251, 0),
                 ),
                 Text(
-                  "5",
+                  "4.6",
                   style: TextStyle(
                       fontSize: 25,
                       fontWeight: FontWeight.bold,
@@ -112,7 +112,7 @@ class _MoscowScreenState extends State<MoscowScreen> {
               alignment: Alignment.center,
               margin: EdgeInsets.all(20),
               child: Text(
-                "Visitors to Moscow usually start exploring in the center, where the Kremlin, Red Square, and the colorful St. Basil's Cathedral are located. The shopping mall GUM, with its glass and steel roof, is also a popular destination—even for tourists who can't afford the luxury brands sold here—and a great place to try authentic Russian food.",
+                "For a stunning overdose of white and gold colors, visit Moika Palace (most famous for being the place where Rasputin was killed) and the Neoclassical, 19th-century St. Isaac's Cathedral, which is actually a Russian Orthodox museum.",
                 style: TextStyle(
                     fontSize: 25,
                     fontWeight: FontWeight.bold,
@@ -280,11 +280,15 @@ class _MoscowScreenState extends State<MoscowScreen> {
                         color: Colors.white),
                   ),
                 ),
+                Divider(
+                  height: 5,
+                  thickness: 2,
+                  color: Color.fromARGB(255, 80, 73, 82),
+                ),
                 SizedBox(
                   width: 20,
                 ),
                 DropdownButton(
-                  
                     value: selectedAnswer,
                     items: trasportation
                         .map((e) => DropdownMenuItem(
@@ -294,7 +298,7 @@ class _MoscowScreenState extends State<MoscowScreen> {
                               style: TextStyle(
                                   fontSize: 19,
                                   fontWeight: FontWeight.bold,
-                                  color: Color.fromARGB(255, 0, 0, 0)),
+                                  color: Color.fromARGB(255, 255, 254, 254)),
                             )))
                         .toList(),
                     onChanged: ((value) {
@@ -315,8 +319,7 @@ class _MoscowScreenState extends State<MoscowScreen> {
             Row(
               children: [
                 Checkbox(
-                  
-                  checkColor: Color.fromARGB(255, 255, 255, 255),
+                  checkColor: Colors.white,
                   value: isChecked,
                   onChanged: (bool? value) {
                     setState(() {
@@ -326,7 +329,7 @@ class _MoscowScreenState extends State<MoscowScreen> {
                 ),
                 Container(
                   child: Text(
-                    "Are Brting your PET",
+                    "With PET",
                     style: TextStyle(
                         fontSize: 25,
                         fontWeight: FontWeight.bold,
@@ -335,19 +338,14 @@ class _MoscowScreenState extends State<MoscowScreen> {
                 ),
               ],
             ),
-            Divider(
-              height: 5,
-              thickness: 2,
-              color: Color.fromARGB(255, 80, 73, 82),
-            ),
             SizedBox(
               height: 20,
             ),
-            Row(
+              Row(
               children: [
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                      primary: Color.fromARGB(255, 120, 102, 224),
+                      primary: Color.fromARGB(0, 96, 24, 158),
                       
                       ),
                   onPressed: () {
@@ -416,7 +414,7 @@ class AppButtons extends StatelessWidget {
       child: Center(
         child: Text(
           text,
-          style: TextStyle(color: textColor, fontWeight: FontWeight.bold),
+          style: TextStyle(color: textColor),
         ),
       ),
       decoration: BoxDecoration(
