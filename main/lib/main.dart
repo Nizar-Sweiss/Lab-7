@@ -54,7 +54,7 @@ class _HomeState extends State<Home> {
               Container(
                   child: Text(
                 "Where Are \nwe going next !? ",
-                style: TextStyle(fontSize: 50,color: Colors.white),
+                style: TextStyle(fontSize: 50,color: Colors.white,fontFamily: "PermanentMarker"),
               )),
               
               SizedBox(

@@ -345,7 +345,7 @@ class _PeterburgScreenState extends State<PeterburgScreen> {
               children: [
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                      primary: Color.fromARGB(0, 96, 24, 158),
+                      primary: Color.fromARGB(255, 120, 102, 224),
                       
                       ),
                   onPressed: () {
